@@ -37,7 +37,6 @@
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    android:drawableLeft=""
     android:paddingStart="30dp"
     android:hint="Сообшение"
    app:layout_constraintBottom_toBottomOf="parent"/>
