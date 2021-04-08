@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/off_notification" android:title="Откл уведомление"/>
+    <item android:id="@+id/clear_chats" android:title="Очистить чат"/>
+    <item android:id="@+id/finish" android:title="Завершить"/>
+
+</menu>
