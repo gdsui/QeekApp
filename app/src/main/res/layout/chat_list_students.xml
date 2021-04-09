@@ -42,43 +42,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/card_view_send_message"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/image_message_send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:src="@mipmap/ic_launcher_round"
-                android:layout_marginEnd="10dp"/>
-            <TextView
-                android:id="@+id/tv_message_send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/image_message_send"
-                android:text="dsnfdmnfd"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="15dp"/>
-            <TextView
-                android:id="@+id/tv_send_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="time"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/tv_message_send"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

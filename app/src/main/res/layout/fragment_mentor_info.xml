@@ -115,7 +115,7 @@
         android:text="Фото"
         app:layout_constraintTop_toBottomOf="@id/tv_problem_desc_type_mentor_info"
         app:layout_constraintStart_toStartOf="@id/tv_problem_desc_type_mentor_info"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black"/>
     <ImageView
         android:id="@+id/image_problem_photo_first"
