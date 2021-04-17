@@ -18,10 +18,12 @@
 
     <TextView
         android:id="@+id/attendance_description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginHorizontal"
+        android:layout_marginEnd="@dimen/marginHorizontal"
         android:layout_marginTop="10dp"
-        android:text="Отчет о посещаемости курса Backend-разработчик,после начало курса "
+        android:text="Отчет о посещаемости курса Backend-разработчик,после \n начало курса "
         app:layout_constraintStart_toStartOf="@id/attendance_title"
         app:layout_constraintTop_toBottomOf="@id/attendance_title" />
 
