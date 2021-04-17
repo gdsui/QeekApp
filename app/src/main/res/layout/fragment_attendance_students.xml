@@ -108,23 +108,26 @@
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="-37dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/const_start_lesson"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_start_lesson"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="@dimen/marginHorizontal"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="@dimen/marginHorizontal"
-        android:background="@drawable/bg_card_attendance_student_start_lesson"
+        app:layout_constraintTop_toBottomOf="@id/calendar_attendance_students"
         app:layout_constraintStart_toStartOf="@id/calendar_attendance_students"
-        app:layout_constraintTop_toBottomOf="@id/calendar_attendance_students">
-
+        >
         <TextView
             android:id="@+id/tv_lesson_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="lesson start :"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:text="Начало урока :"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -134,6 +137,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marginHorizontal"
             android:text="17 : 00"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_lesson_start"
@@ -143,24 +149,29 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="Отменить"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/marginHorizontal"
             style="@style/AppTheme.RoundedCornerMaterialButton"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_attend"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="18dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
         app:layout_constraintHorizontal_weight="0.5"
-        app:layout_constraintTop_toBottomOf="@id/const_start_lesson"
-        app:layout_constraintStart_toStartOf="@id/const_start_lesson"
+        app:layout_constraintTop_toBottomOf="@id/card_start_lesson"
+        app:layout_constraintStart_toStartOf="@id/card_start_lesson"
         >
 
         <TextView
@@ -170,7 +181,7 @@
             android:layout_gravity="left"
             android:layout_marginStart="@dimen/marginHorizontal"
             android:layout_marginTop="15dp"
-            android:text="jdbdnsnferrrh :"
+            android:text="Присутствуют :"
             android:textColor="@color/color_tv_attendance_student" />
 
         <TextView
@@ -199,7 +210,7 @@
             android:layout_gravity="left"
             android:layout_marginTop="15dp"
             android:layout_marginStart="@dimen/marginHorizontal"
-            android:text="jdbdnsnferrrh :"
+            android:text="Отсутсвуют :"
             android:textColor="@color/color_bg_card" />
 
         <TextView
