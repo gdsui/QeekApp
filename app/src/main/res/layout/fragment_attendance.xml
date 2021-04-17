@@ -19,10 +19,12 @@
 
     <TextView
         android:id="@+id/attendance_description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/marginHorizontal"
+        android:layout_marginStart="@dimen/marginHorizontal"
         android:layout_marginTop="10dp"
-        android:text="Отчет о посещаемости курса Backend-разработчик,после начало курса "
+        android:text="Отчет о посещаемости курса Backend-разработчик,после \n начало курса "
         app:layout_constraintStart_toStartOf="@id/attendance_title"
         app:layout_constraintTop_toBottomOf="@id/attendance_title" />
 
@@ -123,11 +125,13 @@
 
     <TextView
         android:id="@+id/tv_attention"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Внимание если процент посешемости ниже 75% вы не можете здать выпускной экзамен "
+        android:layout_marginStart="@dimen/marginHorizontal"
+        android:layout_marginEnd="@dimen/marginHorizontal"
+        android:text="Внимание если процент посешемости \n ниже 75% вы не можете здать выпускной \n экзамен "
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@id/card_attendance_type"
         app:layout_constraintTop_toBottomOf="@id/card_attendance_type" />
