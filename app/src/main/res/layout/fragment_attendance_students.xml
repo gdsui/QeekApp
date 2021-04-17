@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttendanceStudentsFragment">
+
+    <TextView
+        android:id="@+id/attendance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginHorizontal"
+        android:layout_marginTop="25dp"
+        android:text="привет! Android developer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/attendance_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Отчет о посещаемости курса Backend-разработчик,после начало курса "
+        app:layout_constraintStart_toStartOf="@id/attendance_title"
+        app:layout_constraintTop_toBottomOf="@id/attendance_title" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_attendance_type"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="@color/card_background"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="@id/attendance_description"
+        app:layout_constraintTop_toBottomOf="@id/attendance_description">
+
+
+        <TextView
+            android:id="@+id/tv_attendance_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Прошли урокров"
+            android:textColor="@color/white"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_attendance_type_second"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="@dimen/marginHorizontal"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/card_background_third"
+        app:layout_constraintStart_toEndOf="@id/card_attendance_type"
+        app:layout_constraintTop_toBottomOf="@id/attendance_description">
+
+        <TextView
+            android:id="@+id/tv_attendance_total_lessons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Количество уроков"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_attendance_count" />
+    </androidx.cardview.widget.CardView>
+
+
+    <CalendarView
+        android:id="@+id/calendar_attendance_students"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginHorizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/marginHorizontal"
+        android:background="@drawable/bg_calendar"
+        app:layout_constraintTop_toBottomOf="@id/card_attendance_type"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-37dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_start_lesson"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/marginHorizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/marginHorizontal"
+        android:background="@drawable/bg_card_attendance_student_start_lesson"
+        app:layout_constraintStart_toStartOf="@id/calendar_attendance_students"
+        app:layout_constraintTop_toBottomOf="@id/calendar_attendance_students">
+
+        <TextView
+            android:id="@+id/tv_lesson_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="lesson start :"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:text="17 : 00"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_lesson_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_attendance_cancel"
+            android:text="Отменить"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_attend"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginStart="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toStartOf="@id/const_start_lesson"
+        app:layout_constraintTop_toBottomOf="@id/const_start_lesson">
+
+        <TextView
+            android:id="@+id/tv_attend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:text="jdbdnsnferrrh :"
+            android:textColor="@color/color_tv_attendance_student" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:text="10"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/color_tv_attendance_student" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toTopOf="@id/card_attend"
+        app:layout_constraintStart_toEndOf="@id/card_attend">
+        <TextView
+            android:id="@+id/tv_absent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:text="jdbdnsnferrrh :"
+            android:textColor="@color/color_bg_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:text="10"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/color_bg_card" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

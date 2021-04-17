@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/marginHorizontal"
         android:layout_marginTop="25dp"
+        android:textSize="16sp"
         android:text="привет! Android developer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,40 +31,31 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/color_bg_card"
+        app:cardCornerRadius="15dp"
         app:layout_constraintStart_toStartOf="@id/attendance_description"
         app:layout_constraintTop_toBottomOf="@id/attendance_description">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_constr">
+        <TextView
+            android:id="@+id/tv_attendance_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="0"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            />
 
-            <TextView
-                android:id="@+id/tv_attendance_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Пропустили урок"
+            android:textColor="@color/white" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:text="Пропустили урок"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_attendance_count" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -72,35 +64,30 @@
         android:layout_height="120dp"
         android:layout_marginStart="@dimen/marginHorizontal"
         android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/card_background"
         app:layout_constraintStart_toEndOf="@id/card_attendance_type"
         app:layout_constraintTop_toBottomOf="@id/attendance_description">
+        <TextView
+            android:id="@+id/tv_count_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_card_second">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Прошли уроки"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
 
-            <TextView
-                android:id="@+id/tv_count_second"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Прошли уроки"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_count_second" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -108,36 +95,29 @@
         android:layout_height="120dp"
         android:layout_marginStart="@dimen/marginHorizontal"
         android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/card_background_third"
+        app:cardCornerRadius="15dp"
         app:layout_constraintStart_toEndOf="@id/card_attendance_type_second"
         app:layout_constraintTop_toBottomOf="@id/attendance_description">
+        <TextView
+            android:id="@+id/tv_lesson_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_marginTop="15dp"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_const_third">
-
-            <TextView
-                android:id="@+id/tv_lesson_amount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="10dp"
-                android:text="Количество уроков"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_lesson_amount" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="Количество уроков"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
